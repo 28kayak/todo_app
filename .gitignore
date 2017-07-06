@@ -1,0 +1,6 @@
+#igonore .idea folder
+.idea/
+dbconfig/config_note.md
+node_modules/*
+.config/
+config.js

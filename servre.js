@@ -83,6 +83,7 @@ app.post('/api/todos', function (req,res) {
             if(err){
                 res.send(err);
             }
+            app.disable('etag') // use strong etags
             res.json(todos);
         });//end of todo.find
 
@@ -106,6 +107,7 @@ app.delete('/api/todos/:todo_id', function (req,res) {
         {
             res.send(err);
         }
+        app.disable('etag') // use strong etags
         res.json(todos);
         
         

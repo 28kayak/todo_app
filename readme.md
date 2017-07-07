@@ -1,4 +1,4 @@
-# Todo App with MEAN stack
+# Todo App with MEAN stack - Branch: tutorial 1 - 
 The oroginal source of the cordes is https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular
 ## Demonstalation
 the demonstalation is running at

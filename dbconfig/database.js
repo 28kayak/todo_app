@@ -4,5 +4,4 @@
 module.exports = {
     //the database url to connect DB
     url: 'mongodb://todo:admin@ds141082.mlab.com:41082/todo_list'
-
 }

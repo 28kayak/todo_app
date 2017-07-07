@@ -1,4 +1,4 @@
-# Todo App with MEAN stack - Branch: tutorial 2 -
+# Todo App with MEAN stack - Branch: tutorial 3 -
 The original source of the cordes is https://scotch.io/tutorials/node-and-angular-to-do-app-application-organization-and-structure
 ## Demonstalation
 the demonstalation is running at

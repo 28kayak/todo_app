@@ -100,19 +100,25 @@ app.delete('/api/todos/:todo_id', function (req,res) {
         }
         //get all the todos after deleting
         //and then return them 
-        todo.find(function (err, todos) {
-            
-        })
-        if(err)
-        {
-            res.send(err);
-        }
-        app.disable('etag') // use strong etags
-        res.json(todos);
+        Todo.find(function (err, todos){
+            if(err)
+            {
+                res.send(err);
+            }
+            app.disable('etag') // use strong etags
+            res.json(todos);
+        });//end of find
+
+
         
         
     });//end of the remove 
-});//end of the delete 
+});//end of the delete
+app.get('*', function (req,res) {
+    console.log(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/public/index.html'); //path name has to be absolute.
+
+});
 
 
 

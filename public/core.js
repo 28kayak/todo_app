@@ -14,8 +14,28 @@ function mainController($scope, $http){
             console.log("Error: " + data);
         });
     //when submitting the add form, send the text to the node API(so, it is used post method)
-    $http.port('/api/todos', $scope.formData)
-        .success(function (data) {
-            $scope.todos = data;
-        })
-}
+    $scope.createTodo = function() {
+        $http.post('/api/todos', $scope.formData)
+            .success(function (data) {
+                $scope.formData = {};
+                $scope.todos = data;
+                console.log(data);
+            })
+            .error(function (data) {
+                console.log("Error " + data);
+            });
+    };//end of create TODO
+    //delete a todo
+    $scope.deleteTodo = function(id) {
+        $http.delete('/api/todos/' + id)
+            .success(function (data) {
+                $scope.todos = data;
+                console.log(data)
+            })
+            .error(function (data) {
+                console.log("Error : " + data);
+            });
+    };//end of delete todo
+
+
+}// end of main controller

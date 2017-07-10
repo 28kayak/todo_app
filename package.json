@@ -4,6 +4,10 @@
   "description": "Simple todo application.",
   "main": "server.js",
   "author": "Scotch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "~4.7.2",
